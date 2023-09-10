@@ -15,7 +15,6 @@ import numpy as np
 import pykakasi
 import string
 from datetime import datetime
-import multiprocessing
 
 def to_romaji(text, preprocess = "都道府県市町村区"):
     # Text preprocessing
@@ -97,8 +96,8 @@ def process_chunk(chunk):
         process += 1
         print(process)
 
-    aggregate_trip_data.to_pickle(f'pickles/final_chunk_{chunk_num}.pkl')
-    chunk_num += 1
+    # aggregate_trip_data.to_pickle(f'pickles/final_chunk_{chunk_num}.pkl')
+    # chunk_num += 1
 
     print('Chunk process completed')
 
@@ -112,21 +111,12 @@ for csv_file in csv_files:
 
     print(f'Processing {csv_file}')
 
-    multiprocessing.freeze_support()
-
-    num_cores = multiprocessing.cpu_count()
-    chunk_size = 500
+    chunk_size = 20000
 
     chunks = pd.read_csv(csv_file, chunksize=chunk_size)
-    # chunks_with_index = [(index, chunk) for index, chunk in enumerate(chunks)]
-
-    pool = multiprocessing.Pool(processes=num_cores)
-    chunk_trip_data = pool.map(process_chunk, chunks)
-
-    pool.close()
-    pool.join()
-
-    trip_data = pd.concat([trip_data, chunk_trip_data], ignore_index=True)
+    for chunk in chunks:    
+        chunk_trip_data = process_chunk(chunk)
+        trip_data = pd.concat([trip_data, chunk_trip_data], ignore_index=True)
 
 def load_and_print(filename):
     loaded_df = pd.read_pickle(filename)
