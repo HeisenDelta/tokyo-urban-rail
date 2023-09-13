@@ -134,7 +134,7 @@ for csv_file in csv_files:
     trip_data = pd.concat([trip_data] + chunk_trip_data, ignore_index=True, axis=0)
 
 trip_data.to_pickle(f'pickles/tm_trip_data.pkl')
-print('Successfully ')
+print('Successfully pickled the trip data')
 
 """## Loading Nodes DataFrame"""
 
@@ -143,7 +143,7 @@ def load_and_print(filename):
     return loaded_df
 
 nodes_df = load_and_print('pickles/tokyo_metro_nodes.pkl')
-nodes = [row['station_name'] for _, row in nodes_df.iterrows() if row['fare_gate_data_in']['W'] is not None]
+nodes = [row['station_name'] for _, row in nodes_df.iterrows()]
 
 def convert_to_string(text):
     return ''.join([c for c in text if c in string.ascii_letters]).capitalize()
@@ -224,14 +224,11 @@ correction_dict = {'Meijijinguu Mae': 'Meiji-jingumae',
     'San No Wa': 'Minowa',
     'Higashiikebukuro': 'Higashi-ikebukuro',
     'Kokkaigijidoumae': 'Kokkai-gijidomae',
-    'Shinchu No': 'Shin-nakano'}
+    'Shinchu No': 'Shin-nakano',}
 skip_station = ['Wakoshi', 'Nishifunabashi', 'Nakano', 'Nakameguro', 'Meguro', 'Yoyogiuehara']
 
 def try_indexing(station_name):
     global correction_dict, skip_station
-
-    if station_name in skip_station:
-        return None
 
     try:
         origin = nodes.index(station_name)
@@ -245,16 +242,18 @@ def try_indexing(station_name):
             else:
                 corr = input(f'Change {station_name} to >>> ').strip()
 
-            if corr == '':
-                skip_station.append(station_name)
-                return None
-
             correction_dict[station_name] = corr
             origin = nodes.index(corr)
+            print(corr, origin) # This should only be for the stations in skip_station
 
     return origin
 
-matrix_list = [np.zeros((138, 138)) for _ in range(24)]
+print(correction_dict)
+
+MATRIX_SIZE = len(nodes)
+TIMESTEPS = 24
+
+matrix_list = [np.zeros((MATRIX_SIZE, MATRIX_SIZE)) for _ in range(TIMESTEPS)]
 
 for _, row in trip_data.iterrows():
     enter_time = row['enter_time']
@@ -266,4 +265,4 @@ for _, row in trip_data.iterrows():
 
 print(matrix_list)
 
-np.savez('matrix_list_138x138.npz', *matrix_list)
+np.savez('matrix_list_144x144.npz', *matrix_list)
