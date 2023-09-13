@@ -106,35 +106,30 @@ def process_chunk(chunk):
 filepath = os.path.join('od_data')
 csv_files = sorted([f for f in os.listdir(filepath) if f.endswith('.csv')])
 
-for csv_file in csv_files:
-    csv_file = os.path.join(filepath, csv_file)
+if __name__ == '__main__':
 
-    print(f'Processing {csv_file}')
+    for csv_file in csv_files:
+        csv_file = os.path.join(filepath, csv_file)
 
-    multiprocessing.freeze_support()
+        print(f'Processing {csv_file}')
 
-    num_cores = multiprocessing.cpu_count()
-    chunk_size = 20000
+        multiprocessing.freeze_support()
 
-    chunks = pd.read_csv(csv_file, chunksize=chunk_size)
-    # chunks_with_index = [(index, chunk) for index, chunk in enumerate(chunks)]
+        num_cores = multiprocessing.cpu_count()
+        chunk_size = 20000
 
-    pool = multiprocessing.Pool(processes=num_cores)
-    chunk_trip_data = pool.map(process_chunk, chunks)
+        chunks = pd.read_csv(csv_file, chunksize=chunk_size)
 
-    pool.close()
-    pool.join()
+        pool = multiprocessing.Pool(processes=num_cores)
+        chunk_trip_data = pool.map(process_chunk, chunks)
 
-    # print(trip_data)
-    # print(chunk_trip_data)
+        pool.close()
+        pool.join()
 
-    # print(type(trip_data))
-    # print(type(chunk_trip_data))
+        trip_data = pd.concat([trip_data] + chunk_trip_data, ignore_index=True, axis=0)
 
-    trip_data = pd.concat([trip_data] + chunk_trip_data, ignore_index=True, axis=0)
-
-trip_data.to_pickle(f'pickles/tm_trip_data.pkl')
-print('Successfully pickled the trip data')
+        trip_data.to_pickle(f'pickles/tm_trip_data.pkl')
+        print('Successfully pickled the trip data')
 
 """## Loading Nodes DataFrame"""
 
@@ -248,21 +243,22 @@ def try_indexing(station_name):
 
     return origin
 
-print(correction_dict)
+if __name__ == '__main__':
+    print(correction_dict)
 
-MATRIX_SIZE = len(nodes)
-TIMESTEPS = 24
+    MATRIX_SIZE = len(nodes)
+    TIMESTEPS = 24
 
-matrix_list = [np.zeros((MATRIX_SIZE, MATRIX_SIZE)) for _ in range(TIMESTEPS)]
+    matrix_list = [np.zeros((MATRIX_SIZE, MATRIX_SIZE)) for _ in range(TIMESTEPS)]
 
-for _, row in trip_data.iterrows():
-    enter_time = row['enter_time']
-    origin = try_indexing(row['enter_station_name'])
-    dest = try_indexing(row['exit_station_name'])
+    for _, row in trip_data.iterrows():
+        enter_time = row['enter_time']
+        origin = try_indexing(row['enter_station_name'])
+        dest = try_indexing(row['exit_station_name'])
 
-    if origin and dest:
-        matrix_list[enter_time - 1][origin, dest] += row['num_people']
+        if origin and dest:
+            matrix_list[enter_time - 1][origin, dest] += row['num_people']
 
-print(matrix_list)
+    print(matrix_list)
 
-np.savez('matrix_list_144x144.npz', *matrix_list)
+    np.savez('matrix_list_144x144.npz', *matrix_list)
