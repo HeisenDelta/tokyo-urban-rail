@@ -16,8 +16,6 @@ import pykakasi
 import string
 import multiprocessing
 
-import system_level
-
 def to_romaji(text, preprocess = "都道府県市町村区"):
     # Text preprocessing
     if preprocess:
@@ -134,6 +132,11 @@ for csv_file in csv_files:
     # print(type(chunk_trip_data))
 
     trip_data = pd.concat([trip_data] + chunk_trip_data, ignore_index=True, axis=0)
+
+trip_data.to_pickle(f'pickles/tm_trip_data.pkl')
+print('Successfully ')
+
+"""## Loading Nodes DataFrame"""
 
 def load_and_print(filename):
     loaded_df = pd.read_pickle(filename)
@@ -263,4 +266,4 @@ for _, row in trip_data.iterrows():
 
 print(matrix_list)
 
-np.savez('matrix_list.npz', *matrix_list)
+np.savez('matrix_list_138x138.npz', *matrix_list)
