@@ -134,7 +134,7 @@ for csv_file in csv_files:
     trip_data = pd.concat([trip_data] + chunk_trip_data, ignore_index=True, axis=0)
 
 trip_data.to_pickle(f'pickles/tm_trip_data.pkl')
-print('Successfully ')
+print('Successfully pickled trip data')
 
 """## Loading Nodes DataFrame"""
 
