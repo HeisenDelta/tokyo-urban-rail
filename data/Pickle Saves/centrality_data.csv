@@ -1,0 +1,145 @@
+station_name,betweenness_centrality,lines
+Otemachi,0.4164143362902355,"['Chiyoda', 'Hanzomon', 'Marunouchi', 'Tozai']"
+Kudanshita,0.3271825365393768,"['Hanzomon', 'Tozai']"
+Iidabashi,0.3231149957979469,"['Namboku', 'Tozai', 'Yurakucho']"
+Nagatacho,0.23723794563447861,"['Hanzomon', 'Namboku', 'Yurakucho']"
+Yotsuya,0.22501237230873772,"['Marunouchi', 'Namboku']"
+Nihombashi,0.2120112850586605,"['Ginza', 'Tozai']"
+Kayabacho,0.2066213698095902,"['Hibiya', 'Tozai']"
+Korakuen,0.1931041905335216,"['Marunouchi', 'Namboku']"
+Shinjuku-sanchome,0.17568116902303846,"['Fukutoshin', 'Marunouchi']"
+Mitsukoshimae,0.1725703091900274,"['Ginza', 'Hanzomon']"
+Yotsuya-sanchome,0.15076899199818536,['Marunouchi']
+Ichigaya,0.14937791833783176,"['Namboku', 'Yurakucho']"
+Jimbocho,0.14812556748437755,['Hanzomon']
+Takebashi,0.14812556748437755,['Tozai']
+Hanzomon,0.14476514216492536,['Hanzomon']
+Monzen-nakacho,0.14301191765980498,['Tozai']
+Shinjuku-gyoemmae,0.14285671648027604,['Marunouchi']
+Kasumigaseki,0.13600761878610787,"['Chiyoda', 'Hibiya', 'Marunouchi']"
+Kiba,0.13099576479858172,['Tozai']
+Shinjuku,0.13099576479858172,['Marunouchi']
+Ikebukuro,0.1303646630791317,"['Fukutoshin', 'Marunouchi', 'Yurakucho']"
+Toyocho,0.11878262582487935,['Tozai']
+Nishi-shinjuku,0.11878262582487935,['Marunouchi']
+Ginza,0.11786936156088125,"['Ginza', 'Hibiya', 'Marunouchi']"
+Akasaka-mitsuke,0.11052876394647307,"['Ginza', 'Marunouchi']"
+Nakano-sakaue,0.10784989658229095,['Marunouchi']
+Kokkai-gijidomae,0.10739374439758563,"['Chiyoda', 'Marunouchi']"
+Minami-sunamachi,0.10637250073869793,['Tozai']
+Shin-ochanomizu,0.09976244412864131,['Chiyoda']
+Kanda,0.09934072187593308,['Ginza']
+Nishi-kasai,0.09376538954003744,['Tozai']
+Todaimae,0.09376538954003744,['Namboku']
+Kanamecho,0.09376538954003744,"['Fukutoshin', 'Yurakucho']"
+Sakuradamon,0.09376538954003744,['Yurakucho']
+Tameike-sanno,0.0895571925366076,"['Ginza', 'Namboku']"
+Suehirocho,0.08821100652086565,['Ginza']
+Yushima,0.08754930515493894,['Chiyoda']
+Ueno,0.08629859967888133,"['Ginza', 'Hibiya']"
+Yurakucho,0.08096129222889786,['Yurakucho']
+Hon-komagome,0.08096129222889786,['Namboku']
+Senkawa,0.08096129222889786,"['Fukutoshin', 'Yurakucho']"
+Kasai,0.08096129222889786,['Tozai']
+Myogadani,0.07798433386436926,['Marunouchi']
+Ueno-hirokoji,0.07727827727827725,['Ginza']
+Nezu,0.07551673678434241,['Chiyoda']
+Aoyama-itchome,0.07195081913391771,"['Ginza', 'Hanzomon']"
+Shin-otsuka,0.06990462015085276,['Marunouchi']
+Ginza-itchome,0.06796020880527923,['Yurakucho']
+Kotake-mukaihara,0.06796020880527923,"['Fukutoshin', 'Yurakucho']"
+Urayasu,0.06796020880527923,['Tozai']
+Komagome,0.06796020880527923,['Namboku']
+Toranomon Hills,0.06796020880527923,['Hibiya']
+Omote-sando,0.06454414130470466,"['Chiyoda', 'Ginza', 'Hanzomon']"
+Sendagi,0.06392738716682377,['Chiyoda']
+Edogawabashi,0.06262196551273669,['Yurakucho']
+Kyobashi,0.0592486543190768,['Ginza']
+Shin-nakano,0.054762139269181526,['Marunouchi']
+Minami-gyotoku,0.054762139269181526,['Tozai']
+Roppongi-itchome,0.054762139269181526,['Namboku']
+Kamiyacho,0.054762139269181526,['Hibiya']
+Kagurazaka,0.054762139269181526,['Tozai']
+Nishigahara,0.054762139269181526,['Namboku']
+Hikawadai,0.054762139269181526,"['Fukutoshin', 'Yurakucho']"
+Shintomicho,0.054762139269181526,['Yurakucho']
+Suitengumae,0.054762139269181526,['Hanzomon']
+Gokokuji,0.05273326266628735,['Yurakucho']
+Nishi-nippori,0.05269917875551679,['Chiyoda']
+Meiji-jingumae,0.05007386979217966,"['Chiyoda', 'Fukutoshin']"
+Ningyocho,0.045340184072578435,['Hibiya']
+Higashi-ikebukuro,0.04517063749802839,['Yurakucho']
+Awajicho,0.04364722903085949,['Marunouchi']
+Machiya,0.04166795645668884,['Chiyoda']
+Heiwadai,0.04136708362060475,"['Fukutoshin', 'Yurakucho']"
+Higashi-koenji,0.04136708362060475,['Marunouchi']
+Kiyosumi-shirakawa,0.04136708362060475,['Hanzomon']
+Tsukishima,0.04136708362060475,['Yurakucho']
+Gyotoku,0.04136708362060475,['Tozai']
+Azabu-juban,0.04136708362060475,['Namboku']
+Waseda,0.04136708362060475,['Tozai']
+Roppongi,0.04136708362060475,['Hibiya']
+Oji,0.04136708362060475,['Namboku']
+Hongo-sanchome,0.039493167130318745,['Marunouchi']
+Ochanomizu,0.0392014400780283,['Marunouchi']
+Higashi-shinjuku,0.03713426991275904,['Fukutoshin']
+Tokyo,0.03697118732083771,['Marunouchi']
+Zoshigaya,0.03678059030171708,['Fukutoshin']
+Kita-senju,0.03654631753223302,"['Chiyoda', 'Hibiya']"
+Kodemmacho,0.03421046871751096,['Hibiya']
+Nishi-waseda,0.033933245584974146,['Fukutoshin']
+Toranomon,0.03282800622995635,['Ginza']
+Shimbashi,0.032733698226655956,['Ginza']
+Iriya,0.030346883163784564,['Hibiya']
+Shin-koenji,0.027775041859548905,['Marunouchi']
+Shirokane-takanawa,0.027775041859548905,['Namboku']
+Toyosu,0.027775041859548905,['Yurakucho']
+Chikatetsu-akatsuka,0.027775041859548905,"['Fukutoshin', 'Yurakucho']"
+Takadanobaba,0.027775041859548905,['Tozai']
+Oji-kamiya,0.027775041859548905,['Namboku']
+Inaricho,0.027775041859548905,['Ginza']
+Sumiyoshi,0.027775041859548905,['Hanzomon']
+Hiro-o,0.027775041859548905,['Hibiya']
+Myoden,0.027775041859548905,['Tozai']
+Nakano-shimbashi,0.027775041859548905,['Marunouchi']
+Akihabara,0.023277739474922565,['Hibiya']
+Kita-sando,0.021826061262680985,['Fukutoshin']
+Nijubashimae,0.020969171673397024,['Chiyoda']
+Kojimachi,0.01982630947961393,['Yurakucho']
+Hibiya,0.018474014248662126,"['Chiyoda', 'Hibiya']"
+Minowa,0.018133744190082214,['Hibiya']
+Naka-okachimachi,0.016719196296661087,['Hibiya']
+Akasaka,0.014319248826291068,['Chiyoda']
+Ochiai,0.013986013986013986,['Tozai']
+Ayase,0.013986013986013986,['Chiyoda']
+Tatsumi,0.013986013986013986,['Yurakucho']
+Chikatetsu-narimasu,0.013986013986013986,"['Fukutoshin', 'Yurakucho']"
+Tawaramachi,0.013986013986013986,['Ginza']
+Yoyogi-koen,0.013986013986013986,['Chiyoda']
+Shimo,0.013986013986013986,['Namboku']
+Nakano-fujimicho,0.013986013986013986,['Marunouchi']
+Minami-Asagaya,0.013986013986013986,['Marunouchi']
+Kinshicho,0.013986013986013986,['Hanzomon']
+Ebisu,0.013986013986013986,['Hibiya']
+Shirokanedai,0.013986013986013986,['Namboku']
+Baraki-nakayama,0.013986013986013986,['Tozai']
+Higashi-ginza,0.013002277278845778,['Hibiya']
+Minami-senju,0.010473094980137234,['Hibiya']
+Nogizaka,0.010134935487048162,['Chiyoda']
+Hatchobori,0.007594262331778337,['Hibiya']
+Tsukiji,0.006807511737089204,['Hibiya']
+Nishi-funabashi,0.0,['Tozai']
+Yoyogi-uehara,0.0,['Chiyoda']
+Nakano,0.0,['Tozai']
+Akabane-iwabuchi,0.0,['Namboku']
+Meguro,0.0,['Namboku']
+Honancho,0.0,['Marunouchi']
+Ogikubo,0.0,['Marunouchi']
+Naka-meguro,0.0,['Hibiya']
+Oshiage,0.0,['Hanzomon']
+Asakusa,0.0,['Ginza']
+Gaiemmae,0.0,['Ginza']
+Shibuya,0.0,"['Fukutoshin', 'Ginza', 'Hanzomon']"
+Wakoshi,0.0,"['Fukutoshin', 'Yurakucho']"
+Kita-ayase,0.0,['Chiyoda']
+Shin-kiba,0.0,['Yurakucho']
