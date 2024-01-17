@@ -1,5 +1,11 @@
 # A Robustness Analysis for the Tokyo Metro Urban Rail Network
 
+![urban_rail](https://img.shields.io/badge/urban_rail-FFD300)
+![tokyo_metro_analysis](https://img.shields.io/badge/tokyo_metro_analysis-DE38C8)
+![robustness_analysis](https://img.shields.io/badge/robustness_analysis-652EC7)
+![graph_theory](https://img.shields.io/badge/graph_theory-33135C)
+
+
 **ABSTRACT:** For a system as large and complex as the Tokyo Metro urban rail network, failures in the stations and railways can render entire rail lines unusable. To identify locations that are most catastrophic if failed, we perform a robustness analysis. To do so, we constructed a novel dataset from various sources including the 13th Metropolitan Transportation Census and Tokyo Metro’s crowdedness visualization website. Some trains, such as the Tozai line, have long stretches of stations that connect residential areas to the city center, which are most catastrophic to the system at-large if failures occur anywhere along its line.
 
 ## 1. Datasets
