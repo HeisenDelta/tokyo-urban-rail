@@ -31,7 +31,7 @@ at four separate times.
 
 ![station_flow](images/tm_station_influx_difference2.gif)
 
-## 2. Overview of the Project
+## 2. Project Overview
 
 The robustness analysis was made possible due to the transparency of the Tokyo government and the respective train companies. Tokyo Metro publishes its train and station crowdedness data. This data was used with census data collected from passengers traveling in the Tokyo urban rail network on an average weekday to create a NetworkX graph of the network and an array of 24 matrices that represent the number of people who demand a trip between two stations at a time between 1:00 and 24:00.
 
